@@ -1,0 +1,112 @@
+HW_1. The first part
+Linux terminal (GitBash) commands
+
+Для выполнения работы использовала GitBash
+
+1) Посмотреть где я
+pwd
+
+2) Создать папку
+mkdir qa_1
+
+3) Зайти в папку
+cd qa_1
+
+4) Создать 3 папки
+mkdir qa2 qa3 qa4
+
+5) Зайти в любоую папку
+cd /c/Users/Yura/QA/group_30_free/qa_1/qa4
+cd qa4
+
+6) Создать 5 файлов (3 txt, 2 json)
+touch text1.txt text2.txt text3.txt js1.json js2.json
+
+7) Создать 3 папки
+mkdir folder1 folder2 folder3
+
+8) Вывести список содержимого папки
+ls -la
+ls -l
+ls -a
+ls
+
+9) + Открыть любой txt файл
+cat text1.txt
+vim text2.txt
+
+10) + написать туда что-нибудь, любой текст.
+cat >> text1.txt
+hello
+my 
+dear
+friend
+
+vim:
+включить режим редактирования (INSERT) нажатием i
+внести текст
+
+11) + сохранить и выйти.
+cat:
+Enter в конце каждой строки
+Ctrl + C
+
+vim:
+esc - выход из режима редактирования
+:wq - сохранить и выйти из vim
+
+12) Выйти из папки на уровень выше
+cd ..
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+mv text1.txt text2.txt folder1 (перемещаемые файлы и папка находятся в одной и той же директории)
+mv text1.txt text2.txt /c/Users/Yura/QA/group_30_free/qa_1/q2 (перемещаемые файлы и папка находятся в разных директориях)
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+cp text1.txt text2.txt folder1 (копируемые файлы и папка находятся в одной и той же директории)
+cp text1.txt text2.txt /c/Users/Yura/QA/group_30_free/qa_1/q3 (перемещаемые файлы и папка находятся в разных директориях)
+
+15) Найти файл по имени
+find . -name text1.txt (поиск в текущей и субдиректориях)
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+tail -f /c/Users/Yura/QA/group_30_free/qa_5/text3.txt (просмотр содержимого в реальном времени)
+tail -f /c/Users/Yura/QA/group_30_free/qa_5/text3.txt | grep hello (+ поиск слова)
+
+17) вывести несколько первых строк из текстового файла
+head -3 text3.txt
+
+18) вывести несколько последних строк из текстового файла
+tail -2 text3.txt
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+less /c/Users/Yura/QA/group_30_free/qa_5/text3.txt
+
+20) вывести дату и время
+date +"%D %T"
+=========
+
+Задание *
+1) Отправить http запрос на сервер. http://162.55.220.72:5005/terminal-hw-request
+curl http://162.55.220.72:5005/terminal-hw-request
+Task1:
+curl "http://162.55.220.72:5005/get_method?name=viktoriya&age=33"
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+В директории /c/Users/Yura/QA/group_30_free/autoscript создала файла script.txt и папку qa_1
+Находясь в директории ввела команду:
+bash script.txt
+
+Содержание файла script.txt:
+#!/bin/bash
+cd qa_1
+mkdir qa2 qa3 qa4
+cd qa4
+touch text1.txt text2.txt text3.txt js1.json js2.json
+mkdir folder1 folder2 folder3
+ls -la
+mv text1.txt text2.txt folder1
+ echo "Done"
+
+
+=====================
